@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.6.1/react.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.6.1/react-dom.js"></script>
+    <link rel="icon" href="data:;base64,iVBORw0KGgo=">
+  </head>
+  <body>
+    <div id="content"></div>
+    <script type="text/javascript">
+      let h1 = React.createElement('h1', null, 'Hello world!')
+      ReactDOM.render(
+        React.createElement('div', null, h1, h1), // h1: the child elements
+        document.getElementById('content')
+      )
+    </script>
+  </body>
+</html>
+

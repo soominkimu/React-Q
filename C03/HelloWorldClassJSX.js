@@ -66,12 +66,44 @@ class Content extends React.Component {
 	}
 }
 
+// 3.4 React and JSX gotchas
+class Gotchas extends React.Component {
+	render() {
+		let smallFont = {fontSize: '6pt'}
+		return (
+			<div>
+				<span>&copy;&mdash;&ldquo;</span>
+				<input value="&copy;&mdash;&ldquo;"/>
+				<li data-object-id="097FE4F">data-attributes</li>
+				<input style={smallFont} value="small font"/>
+				<span style={{borderColor: 'red',
+					borderWidth: 1,
+					borderStyle: 'solid'}}>Hey</span>
+				<span style={{border: '3px blue solid'}}>Hey</span>
+				<input style={{border: '1px magenta solid'}} disabled={false} value='disabled={false}'/>
+				<input style={{border: '1px cyan solid'}} disabled="false" value='disabled="false"'/>
+			</div>
+		)
+	}
+}
+
+// 3.4.4 class and for
+class RadioInput extends React.Component {
+	render() {
+		return (
+			<div>
+				<input type="radio" name={this.props.name} id={this.props.id}></input>
+				<label htmlFor={this.props.id}>{this.props.label}</label>
+			</div>
+		)
+	}
+}
+
 ReactDOM.render(
 	<div>
-		<HelloWorld/>
-		<DateTimeNow userName='Soomin'/>
-		<HelloWorld2/>
-		<ProfileLink url='/users/azat' label='Profile for Soomin'/>
+		<RadioInput name="Radio" id="3389741" label="What the Heck?"/>
+		<Gotchas/>
+		<Content/>
 		<div>
 			<HelloWorld3
 				id='ember'
@@ -86,7 +118,10 @@ ReactDOM.render(
 				frameworkName='Angular.js'
 				title='Superheroic Javascript MVW Framework'/>
 		</div>
-		<Content/>
+		<ProfileLink url='/users/azat' label='Profile for Soomin'/>
+		<HelloWorld2/>
+		<DateTimeNow userName='Soomin'/>
+		<HelloWorld/>
 	</div>,
 	document.getElementById('content')
 )
