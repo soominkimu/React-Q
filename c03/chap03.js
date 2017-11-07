@@ -123,6 +123,6 @@ ReactDOM.render(
 		<DateTimeNow userName='Soomin'/>
 		<HelloWorld/>
 	</div>,
-	document.getElementById('content')
+	document.getElementById('chap03')
 )
 
