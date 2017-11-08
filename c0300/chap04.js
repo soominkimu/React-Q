@@ -7,8 +7,10 @@ const DigitalDisplay = function(props) {
 const AnalogDisplay = function AnalogDisplay(props) {
 	let date = new Date(props.time)
 	let sDeg = (date.getSeconds()/60)*360
-	let mDeg = (date.getMinutes()/60)*360 + sDeg/60		// adjust for the seconds
-	let hDeg = (date.getHours()/12)*360 + mDeg/12		// adjust for the minutes and seconds
+	let mDg0 = (date.getMinutes()/60)*360		// adjust for the seconds
+	let mDeg = mDg0 + sDeg/60		// adjust for the seconds
+	let hDg0 = (date.getHours()/12)*360		// adjust for the minutes and seconds
+	let hDeg = hDg0 + mDeg/12		// adjust for the minutes and seconds
 	let dialStyle = {
 		position: 'relative',
 		top: 0,
@@ -41,6 +43,12 @@ const AnalogDisplay = function AnalogDisplay(props) {
 		transformOrigin: '0% 0%',
 		backgroundColor: 'grey'
 	}
+	let minuteHandStyle0 = {
+		...minuteHandStyle,
+		top: 114,
+		transform: 'rotate(' + (mDg0 - 90).toString() + 'deg)',
+		backgroundColor: 'yellow'
+	}
 	let hourHandStyle = {
 		position: 'relative',
 		top: 92,
@@ -52,9 +60,17 @@ const AnalogDisplay = function AnalogDisplay(props) {
 		transformOrigin: '0% 0%',
 		backgroundColor: 'grey'
 	}
+	let hourHandStyle0 = {
+		...hourHandStyle,
+		top: 106,
+		transform: 'rotate(' + (hDg0 - 90).toString() + 'deg)',
+		backgroundColor: 'cyan'
+	}
 	return <div>
 		<div style={dialStyle}>
 			<div style={secondHandStyle} />
+			<div style={minuteHandStyle0} />
+			<div style={hourHandStyle0} />
 			<div style={minuteHandStyle} />
 			<div style={hourHandStyle} />
 		</div>
