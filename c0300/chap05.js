@@ -76,7 +76,7 @@ class Content extends React.Component {
 				counter: ++this.state.counter,
 				currentTime: (new Date()).toLocaleString()
 			})
-		})
+		}, 1000)
 	}
 	render() {
 		if (this.state.counter > 2) return null

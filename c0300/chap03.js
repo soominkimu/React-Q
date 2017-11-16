@@ -73,15 +73,15 @@ class Gotchas extends React.Component {
 		return (
 			<div>
 				<span>&copy;&mdash;&ldquo;</span>
-				<input value="&copy;&mdash;&ldquo;"/>
+				<input defaultValue="&copy;&mdash;&ldquo;"/>
 				<li data-object-id="097FE4F">data-attributes</li>
-				<input style={smallFont} value="small font"/>
+				<input style={smallFont} defaultValue="small font"/>
 				<span style={{borderColor: 'red',
 					borderWidth: 1,
 					borderStyle: 'solid'}}>Hey</span>
 				<span style={{border: '3px blue solid'}}>Hey</span>
-				<input style={{border: '1px magenta solid'}} disabled={false} value='disabled={false}'/>
-				<input style={{border: '1px cyan solid'}} disabled="false" value='disabled="false"'/>
+				<input style={{border: '1px magenta solid'}} disabled={false} placeholder='disabled={false}'/>
+				<input style={{border: '1px cyan solid'}} disabled="false" placeholder='disabled="false"'/>
 			</div>
 		)
 	}
