@@ -118,7 +118,7 @@ ReactDOM.render(
 				frameworkName='Angular.js'
 				title='Superheroic Javascript MVW Framework'/>
 		</div>
-		<ProfileLink url='/users/azat' label='Profile for Soomin'/>
+		<ProfileLink url='real-user-data.json' label='Profile for Soomin'/>
 		<HelloWorld2/>
 		<DateTimeNow userName='Soomin'/>
 		<HelloWorld/>
