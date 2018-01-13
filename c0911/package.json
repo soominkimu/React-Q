@@ -1,0 +1,32 @@
+{
+  "name": "c09",
+  "version": "1.0.0",
+  "description": "Chap.9-11",
+  "main": "chap09.js",
+  "scripts": {
+    "start": "static",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "React-Q"
+  },
+  "keywords": [
+    "React",
+    "Quickly"
+  ],
+  "author": "Soomin K",
+  "license": "ISC",
+  "dependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0"
+  },
+  "babel": {
+    "presets": [
+      "react"
+    ]
+  },
+  "devDependencies": {
+    "babel-preset-react": "^6.24.1"
+  }
+}
