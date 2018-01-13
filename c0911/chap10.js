@@ -2,13 +2,13 @@
 class Tooltip extends React.Component {
 	constructor(props) {
 		super(props)
-		this.state = {opacity: false}
+		this.state = {opacity: 0}
 		this.toggle = this.toggle.bind(this)
 	}
 	toggle() {
 		const {offsetTop: top, offsetLeft: left} = ReactDOM.findDOMNode(this)
 		this.setState({
-			opacity: !this.state.opacity,
+			opacity: (this.state.opacity === 0) ? 0.5 : 0,
 			top,
 			left
 		})
@@ -16,7 +16,7 @@ class Tooltip extends React.Component {
 	render() {
 		const style = {
 			zIndex: (this.state.opacity) ? 1000 : -1000,	// CSS z-index
-			opacity: +this.state.opacity,
+			opacity: this.state.opacity,
 			top: (this.state.top || 0) + 20,
 			left: (this.state.left || 0) - 30
 		}
