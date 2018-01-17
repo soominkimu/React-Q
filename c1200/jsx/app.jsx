@@ -2,9 +2,9 @@ require('../css/main.css')
 
 const React = require('react')
 const ReactDOM = require('react-dom')
-const Content03 = require('./content.jsx')
+const Content03 = require('./content03.jsx')
 
 ReactDOM.render(
 	<Content03 />,
-	document.getElementById('content')
+	document.getElementById('chap12')
 )

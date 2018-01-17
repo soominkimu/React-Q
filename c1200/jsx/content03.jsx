@@ -17,14 +17,20 @@ class Content03 extends React.Component {
 		return (
 			<div className="well">
 				<p>{this.prompt}</p>
-				Email: <input ref="emailAddress" className="form-control" type="text" placeholder="soominkimu@gmail.com"/>
-			</div>
-			<div className="form-group">
-				Comments: <textarea ref="comments" className="form-control" placeholder="I like your website!"/>
-			</div>
-			<div className="form-group">
-				<a className="btn btn-primary" onClick={this.submit}>Submit</a>
+				<div className="form-group">
+						Your Email: <input ref="emailAddress" className="form-control" type="text" placeholder="soominkimu@gmail.com"/>
+				</div>
+				<div className="form-group">
+					Comments OMG!: <textarea ref="comments" className="form-control" placeholder="I like your website! WTF"/>
+				</div>
+				<div className="form-group">
+					<a className="btn btn-primary" onClick={this.submit}>Submit</a>
+				</div>
 			</div>
 		)
 	}
 }
+
+// Without exports you get the Error: Element type is invalid: expected a string ... 
+// You likely forgot to export your component from the file it's defined in.'
+module.exports = Content03
