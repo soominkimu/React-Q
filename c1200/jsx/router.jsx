@@ -27,5 +27,5 @@ module.exports = class Router extends React.Component {
 }
 
 module.exports.propTypes = {
-	mapping: PropTypes.array
+	mapping: PropTypes.object
 }
