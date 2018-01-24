@@ -1,6 +1,7 @@
 const React = require('react')
 const ReactDOM = require('react-dom')
 
+// p.234 12.3 Modularizing your code
 class Content03 extends React.Component {
 	constructor(props) {
 		super(props)

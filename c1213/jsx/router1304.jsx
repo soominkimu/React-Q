@@ -1,7 +1,7 @@
 const React = require('react')
 const PropTypes = require('prop-types')
 
-module.exports = class Router extends React.Component {
+module.exports = class Router1304 extends React.Component {
 	constructor(props) {
 		super(props)
 		this.state = {hash: window.location.hash}
